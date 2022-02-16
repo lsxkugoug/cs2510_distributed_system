@@ -1,0 +1,4 @@
+2022/02/15 17:32:14 rpc.Register: reply type of method "ClientSendMessage" is not a pointer: "string"
+2022/02/15 17:32:14 rpc.Register: method "SetAndGetConn" has 1 input parameters; needs exactly three
+2022/02/15 17:32:14 (2022-02-15 17:32:14 ,group:1,name:Alice):I am Alice, nice to meet you
+2022/02/15 17:32:22 rpc.Serve: accept:accept tcp [::]:1220: use of closed network connection

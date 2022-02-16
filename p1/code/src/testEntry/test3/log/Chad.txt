@@ -1,0 +1,4 @@
+2022/02/15 17:33:12 rpc.Register: reply type of method "ClientSendMessage" is not a pointer: "string"
+2022/02/15 17:33:12 rpc.Register: method "SetAndGetConn" has 1 input parameters; needs exactly three
+2022/02/15 17:33:12 (2022-02-15 17:33:07 ,group:1,name:Alice):I am Alice, nice to meet you
+2022/02/15 17:33:12 (2022-02-15 17:33:12 ,group:1,name:Chad):I am Chad, nice to meet you
