@@ -1,0 +1,18 @@
+2022/03/11 09:01:04 client new b = 1 to server0, in this time, 0 ~ 3 are online, but 4 offline
+2022/03/11 09:01:06 client update b = 1 to server0, and send b = 2 to server 4 simutaneously, 0 ~ 4 are online
+2022/03/11 09:01:08 client retrieve all of the servers b = ?
+2022/03/11 09:01:08 server0:
+2022/03/11 09:01:08 the value:[1 2], the vecotor:[[2 0 0 0 0] [0 0 0 2 0]] 
+2022/03/11 09:01:08 conflict happens !!!!!
+2022/03/11 09:01:08 server1:
+2022/03/11 09:01:08 the value:[1 2], the vecotor:[[2 0 0 0 0] [0 0 0 2 0]] 
+2022/03/11 09:01:08 conflict happens !!!!!
+2022/03/11 09:01:08 server2:
+2022/03/11 09:01:08 the value:[1 2], the vecotor:[[2 0 0 0 0] [0 0 0 2 0]] 
+2022/03/11 09:01:08 conflict happens !!!!!
+2022/03/11 09:01:08 server3:
+2022/03/11 09:01:08 the value:[2 1], the vecotor:[[0 0 0 2 0] [2 0 0 0 0]] 
+2022/03/11 09:01:08 conflict happens !!!!!
+2022/03/11 09:01:08 server4:
+2022/03/11 09:01:08 the value:[2 1], the vecotor:[[0 0 0 2 0] [2 0 0 0 0]] 
+2022/03/11 09:01:08 conflict happens !!!!!

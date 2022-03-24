@@ -51,8 +51,6 @@ or go test -v
 
 Note that I just use the `testing` package to execute test, the 'PASS' is not means it is correct. 
 
-The LogFile include the 
-
 **Using docker:**
 
 Or use docker test it automatically:
@@ -64,6 +62,8 @@ Or use docker test it automatically:
 
 ③ docker run  cs2510_dk
 ```
+
+**!!!!!You can find the test log under `p1/code/src/testEntry`**
 
 #### 2) test1: get history message test
 
