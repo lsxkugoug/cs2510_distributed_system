@@ -1,0 +1,8 @@
+2022/03/27 11:27:04 rpc.Register: method "Proceed" has 1 input parameters; needs exactly three
+2022/03/27 11:27:04 rpc.Register: method "ProceedTest" has 1 input parameters; needs exactly three
+2022/03/27 11:27:05 I am  2 , receive  1 's leader election message, so participate the leader election
+2022/03/27 11:27:05 I am  2  try to make leader election
+2022/03/27 11:27:05 Leader is  4
+2022/03/27 11:27:05 I am: 2 stored the b 1 into uncommit datastructure
+2022/03/27 11:27:05 I am: 2 get the commit instruction and apply key = b and value 1
+2022/03/27 11:27:07 I am 2 get the read request from another and return 1
