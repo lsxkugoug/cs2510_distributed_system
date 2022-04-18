@@ -63,6 +63,7 @@ def main(args=None):
         args = sys.argv[1:]
     opts = parse_args(args)
     processor = None
+    print("hello word")
     try:
         processor = TransactionProcessor(url=opts.connect)
         log_config = get_log_config(filename="intkey_log_config.toml")

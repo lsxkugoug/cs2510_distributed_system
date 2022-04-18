@@ -25,12 +25,14 @@ services:
     entrypoint: settings-tp -vv -C tcp://validator:4004
 
   intkey-tp-python:
-    image: hyperledger/sawtooth-intkey-tp-python:chime
+    image: final
     container_name: sawtooth-intkey-tp-python-default
     depends_on:
       - validator
-    entrypoint: intkey-tp-python -vv -C tcp://validator:4004
-
+    entrypoint: "intkey-tp-python -vv -C tcp://validator:4004"
+    volumes:
+      - /home/lsx/Desktop/cs2510_distributed_system/final_project/sawtooth-sdk-python:$HOME/sawtooth-sdk-python/bin
+    
   xo-tp-python:
     image: hyperledger/sawtooth-xo-tp-python:chime
     container_name: sawtooth-xo-tp-python-default

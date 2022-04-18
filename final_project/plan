@@ -1,3 +1,78 @@
 1. run the part manually
 2. add print in int-process
 3. change cli  
+
+docker build commands:
+
+sudo docker image build -f Dockerfile -t myts .
+
+
+deploy commands
+docker run 
+
+docker stop <container id>
+docker ps -a // check all of the container
+docker-compose -f sawtooth-default.yaml up
+docker-compose -f sawtooth-default.yaml down
+
+debug open image with bash
+
+docker run -t -i ubuntu:18.04 /bin/bash
+
+docker build -f examples/myapp/Dockerfile -t myapp .
+
+
+delete all of the images
+docker rmi $(docker images -q)
+
+change img is not useful
+
+
+/usr/lib/python3/dist-packages/sawtooth_intkey/processor
+
+
+intkey create_batch --count 10 --key-count 5
+intkey load -f batches.intkey --url http://rest-api:8008
+
+
+docker commit 1c7ff435bd25 myapp:latest
+
+
+
+1. use default compose file, hyperledger/sawtooth-intkey-tp-python:docker-compose -f sawtooth-default.yaml up
+2. go into sawtooth-intkey-tp-python image
+	docker ps
+	docker exec -it  9f63b8726ac4 bash
+3. copy handler file from host to docker container
+	docker cp sawtooth_intkey/processor/handler.py 9f63b8726ac4:/usr/lib/python3/dist-packages/sawtooth_intkey/processor
+4. commit docker image
+	docker commit 9f63b8726ac4 final:latest
+
+5. test it
+   docker exec -it sawtooth-shell-default bash
+   
+   
+docker push:
+docker login
+docker tag <image> username/image:version
+docker push 
+
+ other: install vim
+  sudo apt upgrade
+sudo apt search vim
+sudo apt-cache search vim
+sudo apt-cache search vim | grep editor
+sudo apt-get update
+sudo apt-get install vim
+
+k8s
+kubectl delete -f sawtooth-kubernetes-default-pbft.yaml
+   
+   
+   
+   
+   intkey create_batch --count 10 --key-count 5
+   intkey load -f batches.intkey --url http://rest-api:8008
+   intkey set name 1  --url http://rest-api:8008
+   docker container logs ecf67d36f7ae
+   
