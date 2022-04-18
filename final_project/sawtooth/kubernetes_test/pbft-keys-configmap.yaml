@@ -1,0 +1,29 @@
+# Copyright 2019 Cargill Incorporated
+#
+# Licensed under the Apache License, Version 2.0 (the License);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an AS IS BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: keys-config
+data:
+  pbft0priv: e501bd31e1fc2bcfaf6a5baf2e4bf1dc76956856e1b34dd56193b5f4c1142e17
+  pbft0pub: 028868ab7d709f67b377ff72ee5bb3dbf54590b83fa2b362ca5dda0d951562ba75
+  pbft1priv: 1454c440deb320e88ab85b637a05c56779dd665ec937519a0fe2414967d716aa
+  pbft1pub: 03bcfc1a828cc2badc2603018ea9a239271a827fd8c1c82e20c483565c7ad9b411
+  pbft2priv: 9907ae66cb0c6b114cde6fed8eacd1ca53bbc08ffd227a0de9cb55c3f6be4307
+  pbft2pub: 02c24c821d964fbd2be7088d3b0dc05fbad22150b5185b45afdc17df39c7fdf7c0
+  pbft3priv: 0aced40fa80bbf874aacde2e119b173a77fe881e49830e0fc9c69d66628cbf58
+  pbft3pub: 03bb31b9c47c3ac32065fab3bbc9ac05cff87a0be58409c553e7782e7e44cb9ad7
+  pbft4priv: db67ed935b7c2870d6ffe7d71850bab699ac196a6f123566df781211fa4dd638
+  pbft4pub: 02ccb36bbfb640f57ae53357e8ad6ed9f500bbaae461954ecd23b9b750c2ed3278
