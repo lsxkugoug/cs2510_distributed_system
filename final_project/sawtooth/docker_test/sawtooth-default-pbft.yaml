@@ -90,7 +90,7 @@ services:
 
   shell:
     image: hyperledger/sawtooth-shell:nightly
-    container_name: sawtooth-shell-default
+    container_name: sawtooth-shell-my
     volumes:
       - pbft-shared:/pbft-shared
     command: |
