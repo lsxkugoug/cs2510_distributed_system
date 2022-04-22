@@ -52,6 +52,15 @@ docker commit 1c7ff435bd25 myapp:latest
    docker exec -it sawtooth-shell-default bash
    
    
+   
+   
+   
+   
+   
+ 1. torchvsion very large, hyperledge docker can't install it.
+ 2. solution: open server locally
+   
+   
 docker push:
 docker login
 docker tag <image> username/image:version
@@ -86,8 +95,16 @@ test batch
  
  
  
- log
- sawtooth-validator-default-0 | [2022-04-18 23:06:21.075 INFO     (unknown file)] findpayload: Verb::Decrement jGPiGe 1 1cf126d0c98178cec58a9a9fbd0f7765ed29b44d9686f3049aa9b2c73cf8ae8d686ba9 1cf126d0c98178cec58a9a9fbd0f7765ed29b44d9686f3049aa9b2c73cf8ae8d686ba9
-sawtooth-validator-default-3 | [2022-04-18 23:06:21.073 INFO     (unknown file)] [/root/.cargo/registry/src/github.com-1ecc6299db9ec823/sawtooth-intkey-0.5.0/src/handler.rs: 291] payload: Verb::Decrement hAjnXp 2 1cf126e945a7b7144b048ded3a1bada9e719f2d2535831c662925a3ce84d1c2fab3e05 1cf126e945a7b7144b048ded3a1bada9e719f2d2535831c662925a3ce84d1c2fab3e05
-sawtooth-validator-default-0 | [2022-04-18 23:06:21.077 DEBUG    (unknown file)] [/root/.cargo/registry/src/github.com-1ecc6299db9ec823/transact-0.3.6/src/execution/adapter/static_adapter.rs: 69] Executing TransactionPair { transaction: Transaction {header_signature: "d6009e772d235017d5e6d18c903547b6dcc7a395347fd88bf3ce9ec1e6a4adb43ba92d80934a4ba1b7f29677c6e5d69aa81cf46a224f3ae85d121448edf04538", header: <575 bytes>,  payload: <29 bytes> }, header: TransactionHeader{ family_name: "intkey", family_version: "1.0", inputs: ["1cf126e945a7b7144b048ded3a1bada9e719f2d2535831c662925a3ce84d1c2fab3e05"]outputs: ["1cf126e945a7b7144b048ded3a1bada9e719f2d2535831c662925a3ce84d1c2fab3e05"]signer_public_key: "023f055cdf85fa3575cfacccd51214e98036cb8a9cd3427f91e913358fe9f8e450", payload_hash: "4b23ae249a075b33c756193d2d1bae8dfe6c160b52e659dbf759168afdb6b7f0c22c648e70fdb845d9e99a10d646a88d9d99dafc2e8c94e5e41f306396aef42f", payload_hash_method: SHA512, nonce: "307836616137353537623461306236376239" } } in context [106, 226, 73, 130, 58, 31, 78, 195, 152, 200, 86, 0, 94, 13, 84, 123]
+
+## image change 
+copy image_recognition file into image
+pip3 install torchvision
+pip3 install rpyc
+
+
+write docker file
+add environment address from gcp
+make on-chain computing and test it
+
+docker run -p 9999:9999 final_gcp_recognition 5
 
