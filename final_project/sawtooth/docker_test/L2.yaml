@@ -22,10 +22,9 @@ services:
 # -------------=== intkey tp ===-------------
 
   intkey-tp-0:
-    image: finalintkey
+    image: finalintkey8
     environment:
-      - gcp_adress="localhost"
-      - gcp_port="9995"
+      - gcp_address=172.18.0.1:9995
     container_name: sawtooth-intkey-tp-python-default-0
     expose:
       - 4004
@@ -33,10 +32,9 @@ services:
     stop_signal: SIGKILL
 
   intkey-tp-1:
-    image: finalintkey
+    image: finalintkey8
     environment:
-      - gcp_adress="localhost"
-      - gcp_port="9996"  
+      - gcp_address=172.18.0.1:9996
     container_name: sawtooth-intkey-tp-python-default-1
     expose:
       - 4004
@@ -44,10 +42,9 @@ services:
     stop_signal: SIGKILL
 
   intkey-tp-2:
-    image: finalintkey
+    image: finalintkey8
     environment:
-      - gcp_adress="localhost"
-      - gcp_port="9997"  
+      - gcp_address=172.18.0.1:9997
     container_name: sawtooth-intkey-tp-python-default-2
     expose:
       - 4004
@@ -55,10 +52,9 @@ services:
     stop_signal: SIGKILL
 
   intkey-tp-3:
-    image: finalintkey
+    image: finalintkey8
     environment:
-      - gcp_adress="localhost"
-      - gcp_port="9998"  
+      - gcp_address=172.18.0.1:9998
     container_name: sawtooth-intkey-tp-python-default-3
     expose:
       - 4004
@@ -66,10 +62,9 @@ services:
     stop_signal: SIGKILL
 
   intkey-tp-4:
-    image: finalintkey
+    image: finalintkey8
     environment:
-      - gcp_adress="localhost"
-      - gcp_port="9999"
+      - gcp_address=172.18.0.1:9999
     container_name: sawtooth-intkey-tp-python-default-4
     expose:
       - 4004

@@ -87,7 +87,7 @@ kubectl delete -f sawtooth-kubernetes-default-pbft.yaml
    
    
 test batch
- intkey create_batch --count 10 --key-count 5
+ intkey create_batch --count 10 --key-count 1 20
  intkey load -f batches.intkey --url http://sawtooth-rest-api-default-0:8008
  
  curl http://sawtooth-rest-api-default-0:8008/blocks
