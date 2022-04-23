@@ -49,7 +49,7 @@ docker commit 1c7ff435bd25 myapp:latest
 	docker commit 9f63b8726ac4 final:latest
 
 5. test it
-   docker exec -it sawtooth-shell-default bash
+   docker exec -it sawtooth-shell-my bash
    
    
    
@@ -80,14 +80,14 @@ kubectl delete -f sawtooth-kubernetes-default-pbft.yaml
    
    
    
-   intkey create_batch --count 10 --key-count 5
+   intkey create_batch --count 10 --key-count 1
    intkey load -f batches.intkey --url http://rest-api:8008
    intkey set name 1  --url http://rest-api:8008
    docker container logs ecf67d36f7ae
    
    
 test batch
- intkey create_batch --count 10 --key-count 1 20
+ intkey create_batch --count 10 --key-count 1
  intkey load -f batches.intkey --url http://sawtooth-rest-api-default-0:8008
  
  curl http://sawtooth-rest-api-default-0:8008/blocks
@@ -106,5 +106,7 @@ write docker file
 add environment address from gcp
 make on-chain computing and test it
 
-docker run -p 9999:9999 final_gcp_recognition 5
+cloud:
+sudo docker pull lsxkugou/final_gcp_recognition
+sudo docker run -p 9999:9999 lsxkugou/final_gcp_recognition 1
 

@@ -1,5 +1,7 @@
 image recognition = count * transaction * node number
 
+ intkey create_batch --count 10 --key-count 1
+ intkey load -f batches.intkey --url http://sawtooth-rest-api-default-0:8008
 
 one batch
 intkey create_batch --count 1 --key-count 1
@@ -7,25 +9,60 @@ one operation:  02:45:46.142- 02:45:38.782
 can be used series operation
 
 
-
+experiment1: original paper
 local 1 cpu,500 ram
 10 batch 01:43:33.522 -  01:43:23.121 
 20 batch 02:24:44.385  - 02:24:22.256
 30 batch 02:42:18.914 -  02:38:31.469
-40 batch  02:52:44.144 - 02:38:31.469
+40 batch  02:52:44.144 - 02:48:51.312
 50 batch 03:00:20.851 - 02:55:24.326 
-60 batch  03:10:59.555- 02:55:24.326
+60 batch  03:10:59.555- 03:04:24.513
 70 batch 03:53:16.004-03:46:31.577
-80 batch
+80 batch  11:27:40.258 - 11:19:23.507
 
 
 
 serverless 2cpu, 4GB ram
-10 batch 
-20 batch 
-30 batch 
-40 batch  
-50 batch 
-60 batch  
-70 batch 
-80 batch
+1 batch  11:59:03.279 - 12:00:33.351
+10 batch 12:05:57.085 - 12:05:17.215
+20 batch 12:13:15.633 - 12:11:57.694
+30 batch  12:18:28.056 -12:16:38.027
+40 batch  12:25:03.705-12:23:04.690 
+50 batch  12:31:45.890 - 12:28:49.012 
+60 batch   12:37:37.976 - 12:34:12.329 
+70 batch   12:44:52.161 -12:40:43.610 
+80 batch   12:52:12.385 - 12:47:48.536
+
+experiment2: large number of batch
+local 1 cpu,500 ram:
+120 batch 16:32:45.580 - 16:19:32.464
+160 batch  18:07:25.154 - 17:50:42.934
+200 batch  18:15:20.600 - 18:35:20.600
+240 batch  17:46:52.983 - 17:22:42.843 
+
+serverless 2cpu, 4GB ram:
+experiemtn3: large batch
+120 batch  14:56:15.248 - 14:50:03.132
+160 batch   15:09:54.131 - 15:00:02.573
+200 batch   15:25:50.889 - 15:13:34.215
+240 batch  15:47:33.030  -  15:33:24.630
+
+
+
+experiemtn3: large number image recognition of each transaction 10000000
+
+local 1 cpu,500 ram:
+20 batch 18:36:37.158 - 18:34:29.683
+40 batch 18:43:08.036 - 18:38:41.918
+60 batch 18:52:10.142 - 18:45:43.856
+80 batch 19:02:02.797 - 18:53:38.121 
+
+
+serverless 2cpu, 4GB ram
+20 batch  15:51:34.869 - 15:50:26.032
+40 batch  15:56:45.397 - 15:54:38.440
+60 batch  16:04:09.171 - 16:00:37.415
+80 batch  16:11:46.268 - 16:06:44.319
+
+
+

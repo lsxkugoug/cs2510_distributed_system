@@ -1,3 +1,0 @@
-cbor
-colorlog
-sawtooth-sdk
